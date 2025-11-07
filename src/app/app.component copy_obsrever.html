@@ -1,0 +1,19 @@
+
+<ul *ngFor="let a of x" appHighlight="red" [appFontSize]="'24px'">
+  <li >
+    {{a}}
+  </li>
+</ul>
+<ul *ngFor="let a of x"  [appFontSize]="'24px'">
+  <li >
+    {{a}}
+  </li>
+</ul>
+
+<ul *ngFor="let a of data"  [appFontSize]="'24px'">
+  <li >
+    {{a}}
+  </li>
+</ul>
+
+<button (click)="GetAsyncData()">test</button>
