@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href "/angular_ci_cd/"
+        run: npm run build -- --configuration production --base-href "/github_pages_ci_cd/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
