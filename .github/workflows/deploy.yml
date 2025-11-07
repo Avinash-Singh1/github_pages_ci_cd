@@ -3,16 +3,10 @@ name: Build and Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Automatically trigger when pushing to main branch
+      - main
 
 permissions:
-  contents: write  # Allow pushing to gh-pages branch
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  contents: write
 
 jobs:
   build:
@@ -38,6 +32,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages      # Ensures auto-update to gh-pages
+          publish_branch: gh-pages
           publish_dir: ./dist/my-angular-app
-          force_orphan: true            # Creates a clean branch for each deploy
+          force_orphan: true
